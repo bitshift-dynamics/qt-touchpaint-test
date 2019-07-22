@@ -35,6 +35,11 @@ protected:
         }
     }
 
+    void keyReleaseEvent(QKeyEvent* ev) {
+        if (ev->key() == Qt::Key_Q)
+            qApp->quit();
+    }
+
 private:
     QVector<QPoint> touchpoints;
 };
